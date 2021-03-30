@@ -1,0 +1,8 @@
+<div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="1rem" style="margin-top: 3rem;">
+  <mat-spinner mode="determinate" [value]="progress"></mat-spinner>
+  <h2>{{progress}}%</h2>
+  <h1>Cmon you can do it!</h1>
+  <p>Just kidding betch</p>
+  <button mat-raised-button color="warn" (click)="stop()">{{resumer}}</button>
+  <button mat-raised-button color="danger" (click)="cancel()">Cancel</button>
+</div>

@@ -1,0 +1,9 @@
+<mat-tab-group *ngIf="!ExerciseInProgress">
+  <mat-tab label="New Exercise">
+    <app-new-training (inprogress)="ExerciseInProgress = true; exercise = $event"></app-new-training>
+  </mat-tab>
+  <mat-tab label="Past">
+    <app-past-training></app-past-training>
+  </mat-tab>
+</mat-tab-group>
+<app-curr-training [ActiveExercise]="exercise" *ngIf="ExerciseInProgress" (Finished)="ExerciseInProgress = false"></app-curr-training>
